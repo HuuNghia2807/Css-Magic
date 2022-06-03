@@ -4,3 +4,20 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+:root {
+    --white-color: #fff;
+    --black-color: #212121;
+    --loading-1-color: #24ecff;
+    --font: 'Rubik', sans-serif;
+    --bgcolor-header: rgb(218, 91, 91);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: var(--font);
+}

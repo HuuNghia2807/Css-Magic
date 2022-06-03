@@ -1,13 +1,25 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import MainLayout from '../Layout/MainLayout.vue'
+import LoadingView from '../views/LoadingView.vue'
+import Loading2View from '../views/Loading2View.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: HomeView
+      name: 'main',
+      component: MainLayout,
+      children: [
+        {
+          path: '',
+          component: LoadingView,
+        },
+        {
+          path: 'loading-2',
+          component: Loading2View,
+        }
+      ]
     },
     // {
     //   path: '/about',
